@@ -784,7 +784,7 @@ public function domestic_recharge(Request $request)
                     $admin_commission = 0;
                     $cost = $xml2->AMOUNT;
                 }
-
+                //test line
                 $create = new RechargeHistory;
                 $create->reseller_id = a::user()->id;
                 $create->number = $request->number;
