@@ -661,7 +661,7 @@ class RechargeController extends Controller
 
     }
 
-    public function domestic_recharge(Request $request)
+public function domestic_recharge(Request $request)
     {
         $change = [' ','Mobile','mobile'];
         $operator = str_replace($change,'',$request->operator);
@@ -802,16 +802,17 @@ class RechargeController extends Controller
             }else {
                 return  Redirect()->back()->with('error','Recharge Incomplete,. Please try again!');
             }
-            return  Redirect()->back()->with('status','Your Recharge Has Been Sucessfull!');
+
         }else{
             return  Redirect()->back()->with('error','Recharge Incomplete,. Please try again!');
         }
-        return  Redirect()->back()->with('status','Your Recharge Has Been Sucessfull!');
+
         }else{
             return  Redirect()->back()->with('error','Insufficient Balance!');
         }
 
     }
+
 
     public function invoices()
     {
